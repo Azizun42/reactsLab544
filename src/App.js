@@ -3,11 +3,13 @@ import logo from './logo.svg';
 import './App.css';
 import CharacterCard from './CharacterCard';
 
+const word = "Hello";
 function App() {
   return (
-    <div className="App">
-      <CharacterCard/>
-      <CharacterCard/>
+    <div>
+    {
+      Array.from(word).map((c,i) => <CharacterCard value={c} key={i}/>)
+    }
     </div>
   );
 }
